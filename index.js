@@ -78,4 +78,35 @@ const composedFunc = (num) => {
   return addNum(dabbleNum(squareNum(num)));
 };
 
-console.log(composedFunc(3));
+// console.log(composedFunc(3));
+
+// Problem 4.--=> Sorting Objects
+
+const cars = [
+  {
+    model: "car001",
+    year: 2000,
+    make: "x",
+  },
+  {
+    model: "car002",
+    year: 2003,
+    make: "y",
+  },
+  {
+    model: "car003",
+    year: 2001,
+    make: "z",
+  },
+  {
+    model: "car004",
+    year: 2005,
+    make: "m",
+  },
+];
+
+const sortingCar = (cars) => {
+  return cars.sort((a, b) => a.year - b.year);
+};
+
+// console.log(sortingCar(cars));
