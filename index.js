@@ -1,6 +1,6 @@
 // Problem 1.--=> Array Filtering and Mapping
 
-const array = [
+const persons = [
   {
     name: "hasan",
     age: 14,
@@ -23,13 +23,15 @@ const array = [
   },
 ];
 
-const filterForFemale = (array) => {
-  const result = array.filter((x) => x.gender !== "female").map((y) => y.name);
+const filterForFemale = (persons) => {
+  const result = persons
+    .filter((x) => x.gender !== "female")
+    .map((y) => y.name);
 
   return result;
 };
 
-// console.log(filterForFemale(array));
+// console.log(filterForFemale(persons));
 
 // Problem 2.--=> Object Manipulation
 
@@ -110,3 +112,17 @@ const sortingCar = (cars) => {
 };
 
 // console.log(sortingCar(cars));
+
+// Problem 5.--=>  Find and Modify
+
+const findAndUpdatePerson = (persons, singlePerson, age) => {
+  let searchedPerson = persons.find((p) => p.name === singlePerson);
+
+  if (singlePerson) {
+    searchedPerson.age = age;
+  }
+
+  return persons;
+};
+
+console.log(findAndUpdatePerson(persons, "hasan", 30));
